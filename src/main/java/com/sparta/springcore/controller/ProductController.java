@@ -33,7 +33,7 @@ public class ProductController {
     // 설정 가격 변경
     @PutMapping("/api/products/{id}")
     public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto) throws SQLException {
-        Product product = productService.updateProduct(id, requestDto);
+       Product product = productService.updateProduct(id, requestDto);
 
 // 응답 보내기 (업데이트된 상품 id)
         return product.getId();
